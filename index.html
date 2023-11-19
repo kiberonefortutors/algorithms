@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algorithms</title>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  #button:hover {
+    background-color: coral;
+  }
+</style>
+
+<body background="" class="bg-dark">
+  <h1 class="text-light text-center my-3">Сравнение работы алгоритмов 2</h1>
+
+  <div class="container text-light text-center border border-3 border-secondary rounded">
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <label class="h3 mb-2">Выберите алгоритм сортировки</label>
+        <br>
+        <select id="selected_algorithm" name="сортировка">
+          <optgroup label="Базовые алгоритмы сортировки">
+            <option value="">Выбери алгоритм</option>
+            <option value="bubble_sort">Bubble sort(Пузырьковая сортировка)</option>
+            <option value="insertion_sort">Insertion sort(Сортировка вставкой)</option>
+            <option value="selection_sort">Selection sort(Сортировка выбором)</option>
+            <option value="quick_sort">Quick sort(Быстрая сортировка(Хоара))</option>
+            <option value="merge_sort">Merge sort(Сортировка слиянием)</option>
+        </select>
+      </div>
+
+      <div class="col-xl-6 col-md-12">
+        <div class="text-center">
+          <label class="mx-0 mb-2">Сколько значений</label>
+          <br>
+          <input class="mt-1 mb-2" id="num_of_values" placeholder="Введите число">
+          <br>
+        </div>
+
+        <div class="text-center">
+          <label class="mx-0 mb-2">Сколько раз повторить</label>
+          <br>
+          <input class="mt-1 mb-2" id="repeat_values" placeholder="Введите число">
+          <br>
+        </div>
+
+        <button id="button" class="btn btn-light " type="submit">Запуск</button>
+      </div>
+    </div>
+    <div class="container border border-3 border-light my-5 py-5 rounded">
+
+      <table align="center">
+
+        <tr>
+          <td>
+            <h2>Вывод</h2>
+            <hr>
+            <h4 id="result" class="" style="visibility: hidden"></h4>
+            <h4 id="result2" class="" style="visibility: hidden">Количество операций: </h4>
+            <hr>
+            <h5 id="machine_info"></h5>
+            <h5 id="min"></h5>
+            <h5 id="max"></h5>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="" id="load_result" style="visibility: hidden;">
+            <hr>
+            <h5 class="mb-3" id="result_download">Скачать бесплатно</h5>
+            <button id="btn_download" class="btn btn-light">Создать файл</button>
+            <hr>
+            <a href="" class="btn btn-success btn_download btn_success" id="save_file" style="visibility: hidden;">
+            Нажмите сюда для скачивания файла
+            </a>
+          </td>
+        </tr>
+<!--  -->
+        <tr>
+          <td class="" id="find_num" style="visibility: hidden;">
+            <hr>
+            <div class="text-center">
+              <label class="mx-0 mb-2 mt-3">Проверить наличие числа в массиве</label>
+              <br>
+              <input class="mt-1 mb-2" id="input_num" placeholder="Введите число">
+              <br>
+            </div>
+            <hr>
+            <a class="btn btn-danger btn_download" id="check" style="visibility: hidden;">
+            Нажмите сюда для поиска
+            </a>
+          </td>
+        </tr>
+
+<!--  -->
+      </table>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+</html>
